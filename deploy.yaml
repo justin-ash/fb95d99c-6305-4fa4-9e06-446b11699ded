@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: integration-test-app
-  namespace: default
   labels:
     app.armada.ai/type: marketplace-apps
     app.armada.ai/name: "integration-test-app"
