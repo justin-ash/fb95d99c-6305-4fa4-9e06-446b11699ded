@@ -33,3 +33,19 @@ spec:
             # runAsNonRoot: true
           ports:
             - containerPort: 80
+--------
+apiVersion: v1
+kind: Service
+metadata:
+  name: integration-test-app-service
+  labels:
+    app.kubernetes.io/instance: "a17cdc20-378b-4c57-b16a-91f8cdcb3dc2"
+    app.armada.ai/name: "integration-test-app"
+    app.armada.ai/type: "armada"
+spec:
+  selector:
+    app: integration-test-app
+  ports:
+    - port: 80
+      targetPort: 80
+            
