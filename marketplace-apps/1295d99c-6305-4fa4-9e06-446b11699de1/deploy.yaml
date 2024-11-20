@@ -39,6 +39,8 @@ metadata:
   namespace: integration-test-app
   labels:
     tier: front-end
+    app.armada.ai/type: marketplace-apps
+    app.armada.ai/name: integration-test-app
 spec:
   type: NodePort
   selector:
@@ -89,6 +91,8 @@ metadata:
   namespace: integration-test-app
   labels:
     tier: backend
+    app.armada.ai/type: marketplace-apps
+    app.armada.ai/name: integration-test-app
 spec:
   type: NodePort
   selector:
