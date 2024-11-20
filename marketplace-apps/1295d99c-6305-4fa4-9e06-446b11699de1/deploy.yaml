@@ -37,11 +37,6 @@ kind: Service
 metadata:
   name: integration-test-app-fe
   namespace: integration-test-app
-  ownerReferences:
-  - apiVersion: apps/v1
-    kind: Deployment
-    name: my-deployment
-    uid: 44821640-b484-45b4-85a8-5b12e2985cf8
   labels:
     tier: front-end
     app.armada.ai/type: marketplace-apps
@@ -94,11 +89,6 @@ kind: Service
 metadata:
   name: integration-test-app-be
   namespace: integration-test-app
-  ownerReferences:
-  - apiVersion: apps/v1
-    kind: Deployment
-    name: my-deployment
-    uid: 6d650deb-1444-431c-870b-bd8adef51d6a
   labels:
     tier: backend
     app.armada.ai/type: marketplace-apps
