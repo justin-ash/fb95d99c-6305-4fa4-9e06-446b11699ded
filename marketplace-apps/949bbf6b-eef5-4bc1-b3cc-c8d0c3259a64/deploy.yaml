@@ -94,11 +94,11 @@ kind: Service
 metadata:
   name: integration-test-app-be
   namespace: integration-test-app
-  ownerReferences:
-  - apiVersion: apps/v1
-    kind: Deployment
-    name: integration-test-app-be
-    uid: 6d650deb-1444-431c-870b-bd8adef51d6a
+  # ownerReferences:
+  # - apiVersion: apps/v1
+  #   kind: Deployment
+  #   name: integration-test-app-be
+  #   uid: 6d650deb-1444-431c-870b-bd8adef51d6a
   labels:
     app.armada.ai/role: backend
     app.armada.ai/type: marketplace-apps
