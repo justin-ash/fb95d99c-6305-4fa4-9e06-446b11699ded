@@ -42,6 +42,7 @@ metadata:
     kind: Deployment
     name: integration-test-app-fe
     uid: 34fa86c6-f804-4f2e-985d-34545c181416
+    controller: true
   labels:
     app.armada.ai/role: frontend
     app.armada.ai/type: marketplace-apps
@@ -99,6 +100,7 @@ metadata:
     kind: Deployment
     name: integration-test-app-be
     uid: e97fd897-2a72-4748-b643-5635d1ff7b49
+    controller: true
   labels:
     app.armada.ai/role: backend
     app.armada.ai/type: marketplace-apps
