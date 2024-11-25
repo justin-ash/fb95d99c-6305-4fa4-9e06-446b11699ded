@@ -37,11 +37,11 @@ kind: Service
 metadata:
   name: integration-test-app-fe
   namespace: integration-test-app
-  ownerReferences:
-  - apiVersion: apps/v1
-    kind: Deployment
-    name: integration-test-app-fe
-    uid: 44821640-b484-45b4-85a8-5b12e2985cf8
+  # ownerReferences:
+  # - apiVersion: apps/v1
+  #   kind: Deployment
+  #   name: integration-test-app-fe
+    # uid: 44821640-b484-45b4-85a8-5b12e2985cf8
   labels:
     app.armada.ai/role: frontend
     app.armada.ai/type: marketplace-apps
