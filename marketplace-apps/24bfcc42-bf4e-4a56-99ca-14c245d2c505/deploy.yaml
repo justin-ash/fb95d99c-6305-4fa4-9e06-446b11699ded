@@ -5,14 +5,14 @@ metadata:
   namespace: integration-test-app
   labels:
     app: web
-    app.armada.ai/role: frontend
+    tier: front-end
     app.armada.ai/type: marketplace-apps
     app.armada.ai/name: integration-test-app
 spec:
   selector:
     matchLabels:
       app: web
-      app.armada.ai/role: frontend
+      tier: front-end
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -20,7 +20,7 @@ spec:
     metadata:
       labels:
         app: web
-        app.armada.ai/role: frontend
+        tier: front-end
         app.armada.ai/type: marketplace-apps
     spec:
       containers:
@@ -43,7 +43,7 @@ metadata:
     name: integration-test-app-fe
     uid: 44821640-b484-45b4-85a8-5b12e2985cf8
   labels:
-    app.armada.ai/role: frontend
+    tier: front-end
     app.armada.ai/type: marketplace-apps
     app.armada.ai/name: integration-test-app
 spec:
@@ -62,14 +62,14 @@ metadata:
   namespace: integration-test-app
   labels:
     app: web
-    app.armada.ai/role: backend
+    tier: backend
     app.armada.ai/type: marketplace-apps
     app.armada.ai/name: integration-test-app
 spec:
   selector:
     matchLabels:
       app: web
-      app.armada.ai/role: backend
+      tier: backend
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -77,7 +77,7 @@ spec:
     metadata:
       labels:
         app: web
-        app.armada.ai/role: backend
+        tier: backend
         app.armada.ai/type: marketplace-apps
     spec:
       containers:
@@ -100,14 +100,14 @@ metadata:
     name: integration-test-app-be
     uid: 6d650deb-1444-431c-870b-bd8adef51d6a
   labels:
-    app.armada.ai/role: backend
+    tier: backend
     app.armada.ai/type: marketplace-apps
     app.armada.ai/name: integration-test-app
 spec:
   type: NodePort
   selector:
     app: web
-    app.armada.ai/role: backend
+    tier: backend
   ports:
     - port: 80
       targetPort: 80
