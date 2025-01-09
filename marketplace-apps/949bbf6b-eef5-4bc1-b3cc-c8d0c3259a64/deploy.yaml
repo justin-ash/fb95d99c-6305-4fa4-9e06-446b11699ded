@@ -95,12 +95,12 @@ kind: Service
 metadata:
   name: integration-test-app-be
   namespace: integration-test-app
-  # ownerReferences:
-  # - apiVersion: apps/v1
-  #   kind: Deployment
-  #   name: integration-test-app-be
-  #   uid: e97fd897-2a72-4748-b643-5635d1ff7b49
-  #   controller: true
+  ownerReferences:
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: integration-test-app-be
+    uid: e97fd897-2a72-4748-b643-5635d1ff7b49
+    controller: true
   labels:
     app.armada.ai/role: backend
     app.armada.ai/type: marketplace-apps
