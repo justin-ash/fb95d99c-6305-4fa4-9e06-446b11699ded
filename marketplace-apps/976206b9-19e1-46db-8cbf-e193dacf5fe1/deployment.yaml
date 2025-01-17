@@ -26,6 +26,13 @@ spec:
       containers:
         - name: metrics-test-app-be
           image: justinjosephqb/metrics-test-app-be:latest
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
           ports:
           - containerPort: 8080
 ---
