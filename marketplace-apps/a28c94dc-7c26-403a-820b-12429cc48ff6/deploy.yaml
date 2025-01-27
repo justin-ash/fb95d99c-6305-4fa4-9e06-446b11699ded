@@ -6,8 +6,8 @@ metadata:
   labels:
     app: web
     app.armada.ai/role: stateful-set
-    app.armada.ai/type: marketplace-apps
-    app.armada.ai/name: stateful-test-app
+    app.armada.ai/type: marketplace-apps1
+    app.armada.ai/name: stateful-test-app111
 spec:
   selector:
     matchLabels:
