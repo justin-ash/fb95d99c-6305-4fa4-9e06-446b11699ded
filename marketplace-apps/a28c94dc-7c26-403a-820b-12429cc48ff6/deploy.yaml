@@ -12,7 +12,7 @@ spec:
     - protocol: TCP
       port: 6379
       targetPort: 6379
-  clusterIP: None # Headless service for StatefulSet
+  clusterIP: 127.0.0.1 # Headless service for StatefulSet
 ---
 apiVersion: apps/v1
 kind: StatefulSet
