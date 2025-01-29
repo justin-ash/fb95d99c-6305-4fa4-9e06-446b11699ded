@@ -12,7 +12,7 @@ spec:
     - protocol: TCP
       port: 6379
       targetPort: 6379
-  clusterIP: 192.168.49.2
+  clusterIP: None
 ---
 apiVersion: apps/v1
 kind: StatefulSet
