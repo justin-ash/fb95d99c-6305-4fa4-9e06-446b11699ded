@@ -1,0 +1,46 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: test-vm
+  namespace: default
+spec:
+  running: true
+  template:
+    metadata:
+      labels:
+        kubevirt.io/domain: test-vm
+    spec:
+      domain:
+        devices:
+          interfaces:
+            - name: default
+              masquerade: {}
+          disks:
+            - disk:
+                bus: virtio
+              name: containerdisk
+        resources:
+          requests:
+            memory: 2Gi
+      networks:
+        - name: default
+          pod: {}
+      volumes:
+        - name: containerdisk
+          containerDisk:
+            image: kubevirt/cirros-container-disk-demo
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-vm-service
+  namespace: default
+spec:
+  selector:
+    kubevirt.io/domain: test-vm
+  ports:
+    - protocol: TCP
+      port: 8080  # Port exposed externally
+      targetPort: 80  # Port inside the VM
+  type: ClusterIP  # Change to NodePort or LoadBalancer if needed
